@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>오른쪽 본문, 왼쪽 사이드바 (메뉴 포함)</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            display: flex;
+            height: 100vh;
+        }
+        .sidebar {
+            width: 250px;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+        .content {
+            flex: 1;
+            padding: 20px;
+        }
+
+        /* 기본 스타일 설정 */
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        ul li {
+            padding: 10px;
+            cursor: pointer;
+        }
+        ul li:hover {
+            background-color: #ddd;
+        }
+        .submenu {
+            display: none;
+            padding-left: 20px;
+        }
+        .submenu li {
+            padding: 5px 0;
+        }
+    </style>
+    <style>
+        #add-task-btn {
+            display: block;
+            border: none;
+            padding: 10px;
+            width: 95%;
+            border-radius: 5px;
+            text-align: left;
+            text-decoration: none;
+            background-color: inherit;
+            color: #a81f00;
+            font-weight: bold;
+        }
+
+        #add-task-btn i {
+            font-size: 20px;
+        }
+
+        #add-task-btn svg {
+            margin-right: 2px;
+        }
+
+        #add-task-btn img {
+            margin-right: 2px;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="sidebar">
+        <button id="add-task-btn" onclick="location.href='index.html'">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-plus-circle-fill" viewBox="0 0 16 16">
+                <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M8.5 4.5a.5.5 0 0 0-1 0v3h-3a.5.5 0 0 0 0 1h3v3a.5.5 0 0 0 1 0v-3h3a.5.5 0 0 0 0-1h-3z" />
+            </svg>
+            <!--<img crossorigin="" src="https://freight.cargo.site/w/100/h/130/q/75/i/W1714325151073113539845249920807/ffcs6.png" width="709" height="924" class="media " decoding="sync" part="media"> -->
+        </button>
+        <ul>
+            <li onclick="toggleSubmenu('menu1')">Exhibitions</li>
+            <ul id="menu1" class="submenu">
+                <li>coexistance</li>
+                <li>touch wood</li>
+                <li>Frozen Are The Winds of Time</li>
+                <li>WEIGHT LOSS PLAN</li>
+                <li>TIME UPON A TIME</li>
+                <li>ł₵(₱Ⱨ)Ø₦ł₵ Đ₳Ɽ₭ⱤØØ₥</li>
+                <li>OZ</li>
+                <li>Airport Railroad</li>
+                <li>Dummy Book Dummie</li>
+                <li>What a Wonderful World</li>
+                <li>ReRe shirts</li>
+                <li>Standing Here Wondering Where To Go</li>
+                <li>Bookmark.Document.Memory</li>
+                <li>Peaceful Mountain</li>
+                <li>The Heroic Weather Conditions</li>
+                <li>A Very Flat Sculpture</li>
+                <li>Launching</li>
+            </ul>
+            <li onclick="toggleSubmenu('menu2')">Artists</li>
+            <ul id="menu2" class="submenu">
+                <li>Chen Yihuan</li>
+                <li>chunggeun lee</li>
+                <li onclick="window.open('https://shanghengdu.com')">Du Shangheng</li>
+                <li onclick="window.open('https://eunjaejoe.com')">Eunjae Joe</li>
+                <li>Janghoon Eom</li>
+                <li onclick="window.open('https://leeseungyul.com')">Seungyul Lee</li>
+                <li>Sangin Kim</li>
+                <li onclick="window.open('https://tingtingma.com')">TingTing Ma</li>
+            </ul>
+            <li onclick="location.href='archive.html'">Archive</li>
+            <li onclick="location.href='about.html'">About us</li>
+            <li onclick="window.location.href='mailto:finalfrontier.seoul@gmail.com'">Email</li>
+            <li onclick="window.open('https://smartstore.naver.com/ff_seoul')">Shop</li>
+            <li onclick="location.href='https://freight.cargo.site/m/Z1713098120253805910662080982823/FF-Floor-Plan.pdf'">Floor Plan</li>
+            <li onclick="location.href='openCall.html'">Open Call</li>
+        </ul>
+    </div>
+</div>
+</body>
