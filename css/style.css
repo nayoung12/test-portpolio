@@ -5,13 +5,20 @@ body {
     margin: 0;
     font-family: Arial, sans-serif;
 }
+
 .container {
     display: flex;
     height: 100vh;
 }
+
 .sidebar {
     width: 250px;
     background-color: #f4f4f4;
+    padding: 20px;
+}
+
+.content {
+    flex: 1;
     padding: 20px;
 }
 
@@ -59,4 +66,72 @@ ul li:hover {
 
 #add-task-btn img {
     margin-right: 2px;
+}
+
+/**/
+/* 작은 화면 (최대 768px 너비) */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    /* 플렉스 레이아웃 유지 */
+    .container {
+        display: flex;
+        flex-direction: column; /* 세로로 배치 */
+        width: 100%;
+        height: auto; /* 자동 높이 */
+    }
+
+    /* 사이드바가 화면의 100%가 아닌 적절한 비율을 차지하도록 설정 */
+    .sidebar {
+        width: 100%; /* 가로 전체 차지 */
+        padding: 10px;
+    }
+
+    /* 본문도 마찬가지로 화면 가로폭에 맞게 조정 */
+    .content {
+        width: 100%;
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    /*
+    ul li {
+        display: none; // <li> 항목 숨기기
+    }
+     */
+
+    /* <ul> 요소 클릭하면 커서가 나타남 */
+    /*
+    ul {
+        cursor: pointer;
+    }
+    */
+}
+
+/* 화면 크기가 클 때 (768px 이상) */
+@media (min-width: 769px) {
+    .container {
+        display: flex; /* 플렉스 레이아웃 유지 */
+        height: 100vh;
+    }
+
+    .sidebar {
+        width: 250px; /* 사이드바 고정 가로폭 */
+    }
+
+    .content {
+        flex: 1; /* 나머지 공간을 본문이 차지하도록 */
+        padding: 20px;
+    }
+
+    /*
+    ul li {
+        display: block;
+    }
+     */
 }
