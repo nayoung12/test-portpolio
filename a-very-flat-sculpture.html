@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Very Flat Sculpture</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/archive.css">
+    <script>
+        fetch('sidebar.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('sidebar').innerHTML = data;
+            })
+            .catch(error => console.log('Error loading sidebar:', error));
+    </script>
+</head>
+<body>
+<div class="container">
+    <div id="sidebar"></div>
+    <div class="content">
+        <div class="archive-header">
+            <h2>A Very Flat Sculpture</h2>
+            <h5>Seung Yul Lee</h5>
+            <br>
+            2022.12.10 ~ 2022.12.29
+            <br><br><br>
+            김진선<br>
+            Jinsun Kim<br>
+            <br><br>
+            <img src="img/camera.jpg" width="400" height="400" style="margin-left: auto; margin-right: auto; display: block;">
+        </div>
+        <div class="archive-content">
+        </div>
+        <div class="archive-author">
+        </div>
+    </div>
+</div>
+<script defer src="js/script.js"></script>
+</body>
+</html>

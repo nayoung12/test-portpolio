@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Heroic Weather Conditions</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/archive.css">
+    <script>
+        fetch('sidebar.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('sidebar').innerHTML = data;
+            })
+            .catch(error => console.log('Error loading sidebar:', error));
+    </script>
+</head>
+<body>
+<div class="container">
+    <div id="sidebar"></div>
+    <div class="content">
+        <div class="archive-header">
+            <h2>The Heroic Weather Conditions</h2>
+            <img src="img/camera.jpg" width="400" height="400" style="margin-left: auto; margin-right: auto; display: block;">
+        </div>
+        <div class="archive-content">
+        </div>
+    </div>
+</div>
+<script defer src="js/script.js"></script>
+</body>
+</html>

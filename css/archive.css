@@ -1,0 +1,8 @@
+.archive-header {
+    text-align: center;
+}
+
+.archive-author{
+    padding-top: 20px;  /* 위쪽 패딩 */
+    padding-bottom: 20px;  /* 아래쪽 패딩 */
+}

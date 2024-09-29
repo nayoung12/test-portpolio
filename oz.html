@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OZ</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/archive.css">
+    <script>
+        fetch('sidebar.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('sidebar').innerHTML = data;
+            })
+            .catch(error => console.log('Error loading sidebar:', error));
+    </script>
+</head>
+<body>
+<div class="container">
+    <div id="sidebar"></div>
+    <div class="content">
+        <div class="archive-header">
+            <h2>OZ</h2>
+            <h5>: We are all matter</h5>
+            <br>
+            2024.08.08 - 08.28
+            <br><br><br>
+            김진선<br>
+            Jinsun Kim<br>
+            <br><br>
+        </div>
+        <div class="archive-content">
+        </div>
+        <div class="archive-author">
+        </div>
+    </div>
+</div>
+<script defer src="js/script.js"></script>
+</body>
+</html>

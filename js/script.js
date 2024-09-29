@@ -1,11 +1,14 @@
 
 // 서브메뉴를 토글하는 함수
-function toggleSubmenu(menuId) {
+function toggleSubmenu(menuId, menuItem) {
     var submenu = document.getElementById(menuId);
+    var menu = document.getElementById(menuItem);
     if (submenu.style.display === "block") {
         submenu.style.display = "none";
+        menu.style.color = ""; // 기본 색상으로 복귀
     } else {
         submenu.style.display = "block";
+        menu.style.color = "orange"; // 원하는 색상으로 변경 (예: 빨간색)
     }
 }
 

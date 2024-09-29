@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>touch wood</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/archive.css">
+    <script>
+        fetch('sidebar.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('sidebar').innerHTML = data;
+            })
+            .catch(error => console.log('Error loading sidebar:', error));
+    </script>
+</head>
+<body>
+<div class="container">
+    <div id="sidebar"></div>
+    <div class="content">
+        <div class="archive-header">
+            <h2>touch wood</h2>
+            <br>
+            2024.07.20 - 08.03
+            <br><br><br>
+            Koyuki<br>
+            <br><br>
+            <img src="img/camera.jpg" width="400" height="400" style="margin-left: auto; margin-right: auto; display: block;">
+        </div>
+        <div class="archive-content">
+            touch wood<br>
+            <br>
+            'touch wood' is an exhibition of photographs and installations held in Tokyo in September 2023 and in Ishikawa in October 2023.<br>
+            touch wood: a magic spell born from an mythology.<br>
+            - It is said that if you touch a wooden object and chant "touch wood," the thing dwelling in it will protect you. They believe that the forests and trees are inhabited by spirits and protect us from bad things.<br>
+            <br>
+            The trees live on even though it changes its shape.<br>
+            <br>
+            I used photographs to express the things that protect me in my daily life and the signs of their presence.
+        </div>
+        <div class="archive-author">
+            <img src="img/camera.jpg" width="400" height="400" style="margin-left: auto; margin-right: auto; display: block;">
+            Koyuki<br>
+            <br>
+            Born 2001, Ishikawa, Japan.<br>
+            Began taking photographs at 16 years old and has continued photographic activities, focusing on the<br>
+            mountain forests and satoyama where i spent childhood.<br>
+            Continues her photographic expression on the theme of the connection between 'memory' and<br>
+            'landscape', not only through photography, but also through video, sound and acrylics.<br>
+            <br>
+            <a href="https://www.smallsnow.ooo/">https://www.smallsnow.ooo/</a>
+        </div>
+    </div>
+</div>
+<script defer src="js/script.js"></script>
+</body>
+</html>
