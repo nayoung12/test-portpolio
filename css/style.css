@@ -46,6 +46,7 @@ ul li:hover {
 
 ul li a {
     text-decoration-line: none;
+    color: inherit;
 }
 
 ul li a:visited {
